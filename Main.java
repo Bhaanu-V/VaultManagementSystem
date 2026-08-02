@@ -1,14 +1,9 @@
 import java.util.Scanner;
-
 public class Main {
-
     public static void main(String[] args) {
-
         Vault bank = new Vault();
         Scanner sc = new Scanner(System.in);
-
         while (true) {
-
             System.out.println("\n--- BANK MENU ---");
             System.out.println("1. Create Account");
             System.out.println("2. Deposit");
