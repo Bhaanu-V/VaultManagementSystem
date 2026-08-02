@@ -16,19 +16,50 @@ public void createAccount(int id, String name, double balance) {
 
     System.out.println("Account created successfully");
 }
-
-
-// DAY 5 - DEPOSIT
 public void deposit(int id, double amount) {
 
     for (Account acc : accounts) {
         if (acc.getAccountId() == id) {
 
             double newBalance = acc.getBalance() + amount;
+            acc.setBalance(newBalance);  
 
             System.out.println("Amount deposited successfully");
             System.out.println("New Balance: " + newBalance);
 
+            return;
+        }
+    }
+
+    System.out.println("Account not found");
+}
+
+public void withdraw(int id, double amount) {
+
+    for (Account acc : accounts) {
+        if (acc.getAccountId() == id) {
+
+            if (acc.getBalance() < amount) {
+                System.out.println("Insufficient balance");
+                return;
+            }
+
+            double newBalance = acc.getBalance() - amount;
+            acc.setBalance(newBalance);   // ✅ important fix
+
+            System.out.println("Withdrawal successful");
+            System.out.println("Remaining Balance: " + newBalance);
+
+            return;
+        }
+    }
+
+    System.out.println("Account not found");
+}
+public void checkBalance(int id) {
+    for (Account acc : accounts) {
+        if (acc.getAccountId() == id) {
+            System.out.println("Balance: " + acc.getBalance());
             return;
         }
     }
