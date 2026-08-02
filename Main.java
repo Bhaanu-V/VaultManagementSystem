@@ -13,7 +13,6 @@ public class Main {
 
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
-
             switch (choice) {
 
                 case 1:
