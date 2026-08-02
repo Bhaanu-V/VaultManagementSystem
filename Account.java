@@ -3,8 +3,8 @@ public class Account {
     private String name;
     private double balance;
     public Account(int accountId, String name, double balance) {
-        this.accountId = accountId;
-        this.name = name;
+        this.accountId=accountId;
+        this.name=name;
         this.balance = balance;
     }
     public int getAccountId() {
@@ -15,6 +15,10 @@ public class Account {
     }
     public double getBalance() {
         return balance;
+    }
+
+    public void setBalance(double balance){
+        this.balance=balance;
     }
 }
 
