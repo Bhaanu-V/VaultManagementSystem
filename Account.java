@@ -1,14 +1,15 @@
+
 public class Account {
-    private int accountId;
+    private int id;
     private String name;
     private double balance;
-    public Account(int accountId, String name, double balance) {
-        this.accountId=accountId;
-        this.name=name;
+    public Account(int id, String name, double balance) {
+        this.id = id;
+        this.name = name;
         this.balance = balance;
     }
-    public int getAccountId() {
-        return accountId;
+    public int getId() {
+        return id;
     }
     public String getName() {
         return name;
@@ -16,9 +17,4 @@ public class Account {
     public double getBalance() {
         return balance;
     }
-
-    public void setBalance(double balance){
-        this.balance=balance;
-    }
 }
-
